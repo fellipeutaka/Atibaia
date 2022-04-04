@@ -57,13 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Hello there!
-Welcome to my first game.
-This game is an attempt to simulate
-my new routine here in Atibaia,
-a city in São Paulo, Brazil.
-I hope you like it, thank you &lt;3
-Developed by Fellipe Utaka.</value>
-  </data>
 </root>
