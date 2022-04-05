@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class Home
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -158,7 +158,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Atibaia.My.Resources.Resources._me
-        Me.PictureBox1.Location = New System.Drawing.Point(474, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(474, 27)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(96, 96)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -184,7 +184,7 @@ Partial Class Form1
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Your stats:"
         '
-        'Form1
+        'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -205,7 +205,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Form1"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Name = "Home"
         Me.Text = "Atibaia"
         Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
