@@ -167,9 +167,9 @@ Partial Class Home
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(486, 299)
+        Me.Button1.Location = New System.Drawing.Point(458, 282)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 31)
+        Me.Button1.Size = New System.Drawing.Size(112, 48)
         Me.Button1.TabIndex = 17
         Me.Button1.Text = "Map"
         Me.Button1.UseVisualStyleBackColor = True
