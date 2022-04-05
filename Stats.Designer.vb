@@ -22,6 +22,7 @@ Partial Class Stats
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -29,15 +30,16 @@ Partial Class Stats
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.ProgressBar2 = New System.Windows.Forms.ProgressBar()
-        Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.EnergyBar = New System.Windows.Forms.ProgressBar()
+        Me.HungerBar = New System.Windows.Forms.ProgressBar()
+        Me.ThirstBar = New System.Windows.Forms.ProgressBar()
+        Me.MoneyLabel = New System.Windows.Forms.Label()
+        Me.IntelligenceLabel = New System.Windows.Forms.Label()
+        Me.StrengthLabel = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.StatusTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -106,54 +108,57 @@ Partial Class Stats
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Intelligence"
         '
-        'ProgressBar1
+        'EnergyBar
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(98, 56)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(100, 15)
-        Me.ProgressBar1.TabIndex = 7
-        Me.ProgressBar1.Value = 100
+        Me.EnergyBar.Location = New System.Drawing.Point(98, 56)
+        Me.EnergyBar.Maximum = 10
+        Me.EnergyBar.Name = "EnergyBar"
+        Me.EnergyBar.Size = New System.Drawing.Size(100, 15)
+        Me.EnergyBar.TabIndex = 7
+        Me.EnergyBar.Value = 10
         '
-        'ProgressBar2
+        'HungerBar
         '
-        Me.ProgressBar2.Location = New System.Drawing.Point(98, 86)
-        Me.ProgressBar2.Name = "ProgressBar2"
-        Me.ProgressBar2.Size = New System.Drawing.Size(100, 15)
-        Me.ProgressBar2.TabIndex = 8
+        Me.HungerBar.Location = New System.Drawing.Point(98, 86)
+        Me.HungerBar.Maximum = 10
+        Me.HungerBar.Name = "HungerBar"
+        Me.HungerBar.Size = New System.Drawing.Size(100, 15)
+        Me.HungerBar.TabIndex = 8
         '
-        'ProgressBar3
+        'ThirstBar
         '
-        Me.ProgressBar3.Location = New System.Drawing.Point(98, 116)
-        Me.ProgressBar3.Name = "ProgressBar3"
-        Me.ProgressBar3.Size = New System.Drawing.Size(100, 15)
-        Me.ProgressBar3.TabIndex = 9
+        Me.ThirstBar.Location = New System.Drawing.Point(98, 116)
+        Me.ThirstBar.Maximum = 10
+        Me.ThirstBar.Name = "ThirstBar"
+        Me.ThirstBar.Size = New System.Drawing.Size(100, 15)
+        Me.ThirstBar.TabIndex = 9
         '
-        'Label8
+        'MoneyLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(98, 206)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(19, 15)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = "$0"
+        Me.MoneyLabel.AutoSize = True
+        Me.MoneyLabel.Location = New System.Drawing.Point(98, 206)
+        Me.MoneyLabel.Name = "MoneyLabel"
+        Me.MoneyLabel.Size = New System.Drawing.Size(44, 15)
+        Me.MoneyLabel.TabIndex = 13
+        Me.MoneyLabel.Text = "R$ 0.00"
         '
-        'Label9
+        'IntelligenceLabel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(98, 176)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(36, 15)
-        Me.Label9.TabIndex = 14
-        Me.Label9.Text = "0 / 20"
+        Me.IntelligenceLabel.AutoSize = True
+        Me.IntelligenceLabel.Location = New System.Drawing.Point(98, 176)
+        Me.IntelligenceLabel.Name = "IntelligenceLabel"
+        Me.IntelligenceLabel.Size = New System.Drawing.Size(36, 15)
+        Me.IntelligenceLabel.TabIndex = 14
+        Me.IntelligenceLabel.Text = "0 / 20"
         '
-        'Label10
+        'StrengthLabel
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(98, 146)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(36, 15)
-        Me.Label10.TabIndex = 15
-        Me.Label10.Text = "0 / 20"
+        Me.StrengthLabel.AutoSize = True
+        Me.StrengthLabel.Location = New System.Drawing.Point(98, 146)
+        Me.StrengthLabel.Name = "StrengthLabel"
+        Me.StrengthLabel.Size = New System.Drawing.Size(36, 15)
+        Me.StrengthLabel.TabIndex = 15
+        Me.StrengthLabel.Text = "0 / 20"
         '
         'PictureBox1
         '
@@ -184,7 +189,12 @@ Partial Class Stats
         Me.Label11.TabIndex = 18
         Me.Label11.Text = "Your stats:"
         '
-        'Home
+        'StatusTimer
+        '
+        Me.StatusTimer.Enabled = True
+        Me.StatusTimer.Interval = 1
+        '
+        'Stats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -192,12 +202,12 @@ Partial Class Stats
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ProgressBar3)
-        Me.Controls.Add(Me.ProgressBar2)
-        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.StrengthLabel)
+        Me.Controls.Add(Me.IntelligenceLabel)
+        Me.Controls.Add(Me.MoneyLabel)
+        Me.Controls.Add(Me.ThirstBar)
+        Me.Controls.Add(Me.HungerBar)
+        Me.Controls.Add(Me.EnergyBar)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -206,7 +216,7 @@ Partial Class Stats
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.Name = "Home"
+        Me.Name = "Stats"
         Me.Text = "Atibaia"
         Me.TopMost = True
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -222,13 +232,14 @@ Partial Class Stats
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents ProgressBar2 As ProgressBar
-    Friend WithEvents ProgressBar3 As ProgressBar
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents EnergyBar As ProgressBar
+    Friend WithEvents HungerBar As ProgressBar
+    Friend WithEvents ThirstBar As ProgressBar
+    Friend WithEvents MoneyLabel As Label
+    Friend WithEvents IntelligenceLabel As Label
+    Friend WithEvents StrengthLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label11 As Label
+    Friend WithEvents StatusTimer As Timer
 End Class

@@ -62,7 +62,7 @@ Partial Class Map
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(191, 65)
         Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Park"
+        Me.Button4.Text = "Gym"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
