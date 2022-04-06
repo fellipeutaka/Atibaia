@@ -40,6 +40,7 @@ Partial Class Stats
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.StatusTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.DeathTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -194,6 +195,11 @@ Partial Class Stats
         Me.StatusTimer.Enabled = True
         Me.StatusTimer.Interval = 1
         '
+        'DeathTimer
+        '
+        Me.DeathTimer.Enabled = True
+        Me.DeathTimer.Interval = 1
+        '
         'Stats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -242,4 +248,5 @@ Partial Class Stats
     Friend WithEvents Button1 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents StatusTimer As Timer
+    Friend WithEvents DeathTimer As Timer
 End Class

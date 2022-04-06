@@ -15,4 +15,17 @@
         IntelligenceLabel.Text = Intelligence & " / 20"
         MoneyLabel.Text = "R$ " & String.Format("{0:n}", Money)
     End Sub
+
+    Private Sub DeathTimer_Tick(sender As Object, e As EventArgs) Handles DeathTimer.Tick
+        If Energy = 0 Then
+            MsgBox("You died", 0, "Atibaia")
+            Stop
+        ElseIf Hunger = 10 Then
+            MsgBox("You died", 0, "Atibaia")
+            Stop
+        ElseIf Thirst = 10 Then
+            MsgBox("You died", 0, "Atibaia")
+            Stop
+        End If
+    End Sub
 End Class

@@ -22,77 +22,77 @@ Partial Class Home
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.WaterButton = New System.Windows.Forms.Button()
+        Me.EatButton = New System.Windows.Forms.Button()
+        Me.RestButton = New System.Windows.Forms.Button()
+        Me.PCButton = New System.Windows.Forms.Button()
+        Me.MapButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'WaterButton
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(191, 65)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Drink water"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.WaterButton.Location = New System.Drawing.Point(12, 12)
+        Me.WaterButton.Name = "WaterButton"
+        Me.WaterButton.Size = New System.Drawing.Size(191, 65)
+        Me.WaterButton.TabIndex = 1
+        Me.WaterButton.Text = "Drink water"
+        Me.WaterButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'EatButton
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 117)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(191, 65)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Eat food from the fridge"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.EatButton.Location = New System.Drawing.Point(12, 117)
+        Me.EatButton.Name = "EatButton"
+        Me.EatButton.Size = New System.Drawing.Size(191, 65)
+        Me.EatButton.TabIndex = 2
+        Me.EatButton.Text = "Eat food from the fridge"
+        Me.EatButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'RestButton
         '
-        Me.Button3.Location = New System.Drawing.Point(239, 12)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(191, 65)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Rest"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.RestButton.Location = New System.Drawing.Point(239, 12)
+        Me.RestButton.Name = "RestButton"
+        Me.RestButton.Size = New System.Drawing.Size(191, 65)
+        Me.RestButton.TabIndex = 3
+        Me.RestButton.Text = "Rest"
+        Me.RestButton.UseVisualStyleBackColor = True
         '
-        'Button4
+        'PCButton
         '
-        Me.Button4.Location = New System.Drawing.Point(239, 117)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(191, 65)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "PC"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.PCButton.Location = New System.Drawing.Point(239, 117)
+        Me.PCButton.Name = "PCButton"
+        Me.PCButton.Size = New System.Drawing.Size(191, 65)
+        Me.PCButton.TabIndex = 4
+        Me.PCButton.Text = "PC"
+        Me.PCButton.UseVisualStyleBackColor = True
         '
-        'Button5
+        'MapButton
         '
-        Me.Button5.Location = New System.Drawing.Point(359, 313)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(191, 65)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Back to map"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.MapButton.Location = New System.Drawing.Point(359, 313)
+        Me.MapButton.Name = "MapButton"
+        Me.MapButton.Size = New System.Drawing.Size(191, 65)
+        Me.MapButton.TabIndex = 5
+        Me.MapButton.Text = "Back to map"
+        Me.MapButton.UseVisualStyleBackColor = True
         '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(562, 390)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.MapButton)
+        Me.Controls.Add(Me.PCButton)
+        Me.Controls.Add(Me.RestButton)
+        Me.Controls.Add(Me.EatButton)
+        Me.Controls.Add(Me.WaterButton)
         Me.Name = "Home"
         Me.Text = "Home"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents WaterButton As Button
+    Friend WithEvents EatButton As Button
+    Friend WithEvents RestButton As Button
+    Friend WithEvents PCButton As Button
+    Friend WithEvents MapButton As Button
 End Class
