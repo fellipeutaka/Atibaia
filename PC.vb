@@ -4,7 +4,11 @@
     End Sub
 
     Private Sub CodeButton_Click(sender As Object, e As EventArgs) Handles CodeButton.Click
-        Energy -= 2
+        If Energy = 1 Then
+            Energy = 0
+        Else
+            Energy -= 2
+        End If
         Hunger += 1
         Thirst += 1
         Intelligence += 1
