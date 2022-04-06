@@ -18,14 +18,17 @@
 
     Private Sub DeathTimer_Tick(sender As Object, e As EventArgs) Handles DeathTimer.Tick
         If Energy = 0 Then
+            DeathTimer.Stop()
             MsgBox("You died", 0, "Atibaia")
-            Stop
+            Me.Close()
         ElseIf Hunger = 10 Then
+            DeathTimer.Stop()
             MsgBox("You died", 0, "Atibaia")
-            Stop
+            Me.Close()
         ElseIf Thirst = 10 Then
+            DeathTimer.Stop()
             MsgBox("You died", 0, "Atibaia")
-            Stop
+            Me.Close()
         End If
     End Sub
 End Class

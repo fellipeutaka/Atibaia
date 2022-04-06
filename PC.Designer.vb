@@ -22,9 +22,41 @@ Partial Class PC
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.PlayButton = New System.Windows.Forms.Button()
+        Me.CodeButton = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'PlayButton
+        '
+        Me.PlayButton.Location = New System.Drawing.Point(12, 12)
+        Me.PlayButton.Name = "PlayButton"
+        Me.PlayButton.Size = New System.Drawing.Size(191, 65)
+        Me.PlayButton.TabIndex = 2
+        Me.PlayButton.Text = "Play Games"
+        Me.PlayButton.UseVisualStyleBackColor = True
+        '
+        'CodeButton
+        '
+        Me.CodeButton.Location = New System.Drawing.Point(273, 12)
+        Me.CodeButton.Name = "CodeButton"
+        Me.CodeButton.Size = New System.Drawing.Size(191, 65)
+        Me.CodeButton.TabIndex = 3
+        Me.CodeButton.Text = "Code"
+        Me.CodeButton.UseVisualStyleBackColor = True
+        '
+        'PC
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.CodeButton)
+        Me.Controls.Add(Me.PlayButton)
+        Me.Name = "PC"
         Me.Text = "PC"
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents PlayButton As Button
+    Friend WithEvents CodeButton As Button
 End Class
