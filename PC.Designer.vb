@@ -24,6 +24,9 @@ Partial Class PC
     Private Sub InitializeComponent()
         Me.PlayButton = New System.Windows.Forms.Button()
         Me.CodeButton = New System.Windows.Forms.Button()
+        Me.WorkButton = New System.Windows.Forms.Button()
+        Me.StudyButton = New System.Windows.Forms.Button()
+        Me.HomeButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'PlayButton
@@ -44,11 +47,41 @@ Partial Class PC
         Me.CodeButton.Text = "Code"
         Me.CodeButton.UseVisualStyleBackColor = True
         '
+        'WorkButton
+        '
+        Me.WorkButton.Location = New System.Drawing.Point(12, 122)
+        Me.WorkButton.Name = "WorkButton"
+        Me.WorkButton.Size = New System.Drawing.Size(191, 65)
+        Me.WorkButton.TabIndex = 4
+        Me.WorkButton.Text = "Work"
+        Me.WorkButton.UseVisualStyleBackColor = True
+        '
+        'StudyButton
+        '
+        Me.StudyButton.Location = New System.Drawing.Point(273, 122)
+        Me.StudyButton.Name = "StudyButton"
+        Me.StudyButton.Size = New System.Drawing.Size(191, 65)
+        Me.StudyButton.TabIndex = 5
+        Me.StudyButton.Text = "Study"
+        Me.StudyButton.UseVisualStyleBackColor = True
+        '
+        'HomeButton
+        '
+        Me.HomeButton.Location = New System.Drawing.Point(357, 289)
+        Me.HomeButton.Name = "HomeButton"
+        Me.HomeButton.Size = New System.Drawing.Size(191, 65)
+        Me.HomeButton.TabIndex = 6
+        Me.HomeButton.Text = "Back to home"
+        Me.HomeButton.UseVisualStyleBackColor = True
+        '
         'PC
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(560, 366)
+        Me.Controls.Add(Me.HomeButton)
+        Me.Controls.Add(Me.StudyButton)
+        Me.Controls.Add(Me.WorkButton)
         Me.Controls.Add(Me.CodeButton)
         Me.Controls.Add(Me.PlayButton)
         Me.Name = "PC"
@@ -59,4 +92,7 @@ Partial Class PC
 
     Friend WithEvents PlayButton As Button
     Friend WithEvents CodeButton As Button
+    Friend WithEvents WorkButton As Button
+    Friend WithEvents StudyButton As Button
+    Friend WithEvents HomeButton As Button
 End Class
